@@ -1,0 +1,153 @@
+<!-- checkout.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Uma Medical Store</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header,
+        footer {
+            background-color: #5fa3e6;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .checkout-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .checkout-button:hover {
+            background-color: #82c1ec;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>  
+            <h1>Checkout</h1>
+        </header>
+        <form action=" " method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="fullName">fullname:</label>
+                <input type="text" id="fullName" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">phonenumber:</label>
+                <input type="tel" id="phoneNumber" name="phonenumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="orderDetails">orderdetails:</label>
+                <textarea id="orderDetails" name="orderdetails" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardnumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="expirationDate">Expiration Date:</label>
+                <input type="text" id="expirationDate" name="expirationdate" placeholder="MM/YY" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+
+            <button class="checkout-button">Proceed to Payment</button>
+        </form>
+
+
+        
+        <!-- Replace the "Check Your Order" link with a button -->
+              <button type="button" class="check-order-button" onclick="location.href='http://127.0.0.1:8000/check'">Check Your Order</button>
+
+    </div>
+    <footer>
+        &copy; 2023 Uma Medical Store. All rights reserved.
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

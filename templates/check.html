@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Medical Store</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 20px;
+            
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px;
+        }
+
+        h1, h2 {
+            color: #333; /* Dark text color for better readability */
+        }
+
+        .medicine-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .medicine-item {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for items */
+            border-radius: 5px;
+            padding: 15px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0.1px;
+            background-color: rgba(16, 16, 16, 0.8); /* Semi-transparent white background for footer */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Uma Medical Store</h1>
+            <a href="http://127.0.0.1:8000/" style="text-decoration: none; color: #333; padding: 10px; background-color: #5fa3e6; border-radius: 5px;">Back TO Home</a>
+        </header>
+        <h2>Verfy Your Order Here.....!</h2>
+        <ol class="medicine-list">
+            {% for i in data %}
+            <li class="medicine-item">
+                <div>
+                    <p><strong>{{ i.fullname }}</strong></p>
+                    <p><strong>{{ i.email }}</strong></p>
+                    <p><strong>{{ i.phonenumber }}</strong></p>
+                    
+                </div>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <footer>
+        <p>Contact us: <a href="mailto:umamedicals2002@gmail.com">umamedicals2002@gmail.com</a> | Phone: +19-9603775877</p>
+        <p>Uma Online Medicals - Providing Quality Medicines</p>
+    </footer>
+</body>
+
+</html>

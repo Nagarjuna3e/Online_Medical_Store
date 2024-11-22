@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4; /* Light gray background color */
+        }
+
+        header {
+            background-color: #3498db; /* Blue header color */
+            color: white;
+            text-align: center;
+            padding: 0.5em;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav {
+            background-color: #2c3e50; /* Dark blue navigation color */
+            color: white;
+            padding: 0.5em;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #34495e; /* Slightly lighter blue navigation item color */
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50; /* Darker blue on hover */
+        }
+
+        .main-section {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+            color: #333;
+        }
+
+        .left-frame {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-frame img {
+            width: 100%;
+            border-radius: 5px;
+            animation: slide 14s linear infinite; /* Adjust the total duration as needed */
+        }
+
+        @keyframes slide {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            14.2857142857% {
+                transform: translateX(0);
+            }
+            28.5714285714% {
+                transform: translateX(-100%);
+            }
+            42.8571428571% {
+                transform: translateX(-100%);
+            }
+            57.1428571429% {
+                transform: translateX(-200%);
+            }
+            71.4285714286% {
+                transform: translateX(-200%);
+            }
+            85.7142857143% {
+                transform: translateX(-300%);
+            }
+        }
+
+        .right-frame {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff; /* White background color */
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #3498db; /* Blue footer color */
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+    </style>
+    <title>Medical Store</title>
+</head>
+<body>
+    <header>
+        <h1 style="margin: 0;">Welcome to Our Online Medical Store</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href=" http://127.0.0.1:8000/Login">LogIn</a></li>
+            <li><a href=" http://127.0.0.1:8000/about">About Us</a></li>
+            <li><a href=" http://127.0.0.1:8000/Contact">Contact</a></li>
+            <li><a href=" http://127.0.0.1:8000/users">our Family</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+        <div class="left-frame">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://omsi.in/wp-content/uploads/2018/04/Online-Medical-Store-visakhapatnam.jpg" alt="Medical Store Image 1"></div>
+                    <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/online-pharmacy-landing-page-template_23-2148223131.jpg" alt="Medical Store Image 2"></div>
+                    <div class="swiper-slide"><img src="https://media.istockphoto.com/id/1220008322/vector/online-pharmacy-flat-illustration-medicine-ordering-mobile-app-medical-supplies-bottles.jpg?s=612x612&w=0&k=20&c=8PRiwVEO18fxLDtYq8AgB_968EpQJwVMhpVlguzcsng=" alt="Medical Store Image 3"></div>
+                    <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/vector-banner-online-pharmacy-service_107791-7615.jpg" alt="Medical Store Image 4"></div>
+                    <div class="swiper-slide"><img src="https://s.tmimgcdn.com/scr/800x500/271300/medica-medical-woocommerce-wordpress-theme_271321-original.png"></div>
+                    <div class="swiper-slide"><img src="https://img.freepik.com/free-photo/pharmacist-checking-medicines-drugstore_259150-57964.jpg" alt="Medical Store Image 6"></div>
+                    <div class="swiper-slide"><img src="https://images.projectsgeek.com/2017/03/contact-us-1.jpg" ></div>
+                    <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/flat-design-medical-landing-page_23-2149164615.jpg" ></div>
+                    <!-- Add more slides as needed -->
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <div class="right-frame">
+            <h2>WELLCOME TO UMA MEDICALS</h2>
+            <p>"Health is happiness. Uma Medical Store is your partner in both. Let's make every day a healthy day together!".</p>
+        <p>"Uma Medical Store: Where your health is our heartbeat. We're not just here to fill prescriptions; we're here to make sure you leave with a smile and the right support for your health journey."</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Online Medical Store</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 5,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
